@@ -1,20 +1,22 @@
 import React, {Component} from 'react';
 
 const ShowCards = ({model}) => {
+	console.log('hola')
 		return (
 		<div className="container text-center">
-			<div className="number"><p>model.numberRandom()</p></div>
-			<PrintCards />
-			<NumberBinary />
+			<div className="number"><p>{model.numberRandom()}</p></div>
+			<PrintCards model={model}/>
+			<NumberBinary model={model} />
 		</div>
 	)
-}
+} 
 
 const PrintCards = ({model}) => {
+	console.log(model.cards);
 	let listCards = model.cards.map((card, index) => {
 		return (
 			<div className="col" key={index}>
-				<img src={card.srcImg} />
+				<p>{card.srcImg}</p>
 			</div>
 		)
 	})
@@ -24,12 +26,11 @@ const PrintCards = ({model}) => {
 }
 
 const NumberBinary = ({model}) => {
+	let num = model.cards.map((card, index) => {
+		return ( <label key={index}>{card.value}</label> )
+	})
 	return (
-		<div><p>
-			{model.cards.one.value} - {model.cards.two.value} - 
-			{model.cards.four.value} - {model.cards.eight.value} - 
-			{model.cards.sixten.value}
-		</p></div>
+		<div>{num}</div>
 	)
 }
 

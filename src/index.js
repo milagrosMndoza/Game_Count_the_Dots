@@ -5,7 +5,7 @@ import App from './App';
 import Model from './Model';
 import registerServiceWorker from './registerServiceWorker';
 
-const model = new Model () ;
+const model = new Model() ;
 const render = () => {
 	ReactDOM.render(<App model={model}/>, document.getElementById('root'));
 }

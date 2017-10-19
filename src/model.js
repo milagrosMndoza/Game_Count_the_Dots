@@ -3,33 +3,33 @@ import React from 'react';
 class Model {
 	constructor(){
 		this.notify = null;
-		this.cards = {
-			sixten : {
+		this.cards = [
+			 {
 				value: 0,
 				state: false,
 				srcImg:"direccionIMAgen"
 			},
-			eight : {
+			{
 				value: 0,
 				state: false,
 				srcImg:"direccionIMAgen"
 			},
-			four : {
+			{
 				value: 0,
 				state: false,
 				srcImg:"direccionIMAgen"
 			},
-			two : {
+			{
 				value: 0,
 				state: false,
 				srcImg:"direccionIMAgen"
 			},
-			one : {
+			{
 				value: 0,
 				state: false,
-				srcImg:"direccionIMAgen"
+				srcImg:"https://ugc.kn3.net/i/origin/http://www.definicionabc.com/wp-content/uploads/punto.gif"
 			}
-		}
+		];
 	}
 	subscribe (render) {
 		this.notify = render;
