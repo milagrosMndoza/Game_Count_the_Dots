@@ -2,34 +2,39 @@ import React from 'react';
 
 class Model {
 	constructor(){
+		this.numRandom = this.numberRandom();
 		this.notify = null;
-		this.cards = {
-			sixten : {
+		this.cards = [ {
+				id:16,
 				value: 0,
 				state: false,
 				srcImg:"direccionIMAgen"
 			},
-			eight : {
+			{
+				id: 8,
 				value: 0,
 				state: false,
 				srcImg:"direccionIMAgen"
 			},
-			four : {
+			{
+				id:4,
 				value: 0,
 				state: false,
 				srcImg:"direccionIMAgen"
 			},
-			two : {
+			 {
+				id:2,
 				value: 0,
 				state: false,
 				srcImg:"direccionIMAgen"
 			},
-			one : {
+			{
+				id:1,
 				value: 0,
 				state: false,
 				srcImg:"direccionIMAgen"
 			}
-		}
+		]
 	}
 	subscribe (render) {
 		this.notify = render;
