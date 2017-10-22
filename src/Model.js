@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from './tarjeta1.png';
 
 class Model {
 	constructor(){
@@ -8,31 +9,31 @@ class Model {
 				id:16,
 				value: 0,
 				state: false,
-				srcImg:"direccionIMAgen"
+				srcImg:Card
 			},
 			{
 				id: 8,
 				value: 0,
 				state: false,
-				srcImg:"direccionIMAgen"
+				srcImg:Card
 			},
 			{
 				id:4,
 				value: 0,
 				state: false,
-				srcImg:"direccionIMAgen"
+				srcImg:Card
 			},
 			 {
 				id:2,
 				value: 0,
 				state: false,
-				srcImg:"direccionIMAgen"
+				srcImg:Card
 			},
 			{
 				id:1,
 				value: 0,
 				state: false,
-				srcImg:"direccionIMAgen"
+				srcImg:Card
 			}
 		]
 	}
