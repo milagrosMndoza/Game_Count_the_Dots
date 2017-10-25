@@ -52,6 +52,11 @@ class Model {
 	subscribe (render) {
 		this.notify = render;
 	}
+	respuestaCorrecta(comprobar, numberRandom){
+		if (this.comprobar== this.numberRandom){
+			alert('Respuesta Correcta');
+		}
+	}
 	showCard(card){
 		card.state=!card.state;
 		if(card.value===0){
@@ -65,6 +70,7 @@ class Model {
 			this.comprobar-=card.id;
 		}
 		console.log(this.comprobar);
+
 		this.notify();
 	}
 	numberRandom(){
