@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './App.css';
 
 const ShowCards = ({model}) => {
 	let numberRandow= model.numRandom;
@@ -14,14 +15,15 @@ const ShowCards = ({model}) => {
 const PrintCards = ({model}) => {
 	let listCards = model.cards.map((card, index) => {
 		return (
-			<div className="col" key={index}>
-				<div onClick={e=>model.selectionCard(index)}> {card.id} </div>
-				<img src={card.srcImg} />
+			<div className="col card" key={index}>
+				<div className="carta1 side col-2" onClick={()=>model.showCard(card)} >
+				<div clasName="portada"><img id={card.id} src={card.state?card.num:card.srcImg} style={{display: 'block'}} /></div>
+				 </div>
 			</div>
 		)
 	})
 	return(
-		<div className="row">{listCards}</div>
+		<div className="row card-container">{listCards}</div>
 	)
 }
 
